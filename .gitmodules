@@ -1,0 +1,3 @@
+[submodule "bytecoin"]
+	path = bytecoin
+	url = https://github.com/amjuarez/bytecoin.git

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Intrinsiccoin Wallet
+Comment=Intrinsiccoin wallet
+Exec=intrinsiccoinwallet %U
+Terminal=false
+Type=Application
+Icon=intrinsiccoin
+MimeType=x-scheme-handler/intrinsiccoin;
+Categories=Office;Finance;
