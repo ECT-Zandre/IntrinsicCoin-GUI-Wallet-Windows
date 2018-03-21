@@ -3,3 +3,5 @@ build/
 *~
 *.autosave
 *.user
+/libs/rocksdblib.lib
+/rocksdblib.lib
