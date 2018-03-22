@@ -56,15 +56,15 @@ QString Style::fontColorRed() const {
 }
 
 QString Style::fontColorBlueNormal() const {
-  return "#0580e8";
+  return "#993399"; //#0580e8
 }
 
 QString Style::fontColorBlueHover() const {
-  return "#005faf";
+  return "#862d86"; //005faf
 }
 
 QString Style::fontColorBluePressed() const {
-  return "#0580e8";
+  return "#ac39ac"; //0580e8
 }
 
 QString Style::backgroundColorGray() const {

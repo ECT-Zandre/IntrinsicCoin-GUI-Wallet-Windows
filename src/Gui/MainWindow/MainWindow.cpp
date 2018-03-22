@@ -1,4 +1,4 @@
-// Copyright (c) 2015-2017, The Intrinsiccoin developers.
+// Copyright (c) 2015-2017, The Intrinsiccoin developers
 //
 // This file is part of Intrinsiccoin.
 //

@@ -44,19 +44,19 @@ QString LightStyle::addressFontColor() const {
 }
 
 QString LightStyle::balanceFontColor() const {
-  return "#000000";
+  return "#601f60"; //#000000
 }
 
 QString LightStyle::toolButtonBackgroundColorNormal() const {
-  return "#edf0f7";
+  return "#f8ecf8"; //edf0f7
 }
 
 QString LightStyle::toolButtonBackgroundColorHover() const {
-  return "#d1deeb";
+  return "#ecc6ec"; //d1deeb
 }
 
 QString LightStyle::toolButtonBackgroundColorPressed() const {
-  return "#5f9cc7";
+  return "#cc66cc"; //#5f9cc7
 }
 
 QString LightStyle::toolButtonFontColorNormal() const {
