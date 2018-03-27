@@ -35,4 +35,21 @@ cmake -G "Visual Studio 15 Win64" -DCMAKE_PREFIX_PATH="C:\Qt2\5.9.1\msvc2015" -D
 mkdir build && cd build && cmake -DSTATIC=1 .. && make
 ```
 
+**The details below are from one of the issues on github (https://github.com/forknote/forknote/issues/1)**
 
+You can look at my repo for windows ONLY GUI wallet. The build is not straightforward though, unfortunately.
+
+Do the following:
+
+    Fork the IntrinsicCoin-GUI-Wallet repository, add the submodule in your clone or just replace the 'IntrinsicCoin' folder with your coin code.
+    BEFORE building the wallet you need to do the following:
+    a. Delete the contents of the 'libs' folder within the GUI wallet root directory.
+    b. In the IntrinsicCoin-GUI-Wallet/IntrinsicCoin/External folder create a 'Build' folder, execute cmake with DSTATIC option 0. This step is important.
+    c. Build in MSVCS 2017/Boost 1.66, then copy the resulting rocksdblib.lib file from the 'Build' folder into the 'libs' folder within the GUI wallet root directory.
+    d. Next, Build the 'IntrinsicCoin' using cmake with DSTATIC option 0. Again, this step is important. Note: The build in MSVC 2017 may fail but dont worry, just copy the resulting '.lib' files from your coin's build folder into the 'libs' folder within the GUI wallet root directory.
+    c. Next get into the GUI wallet root directory, ie 'IntrinsicCoin-GUI-Wallet' and do cmake with DSTATIC option 1, and build your wallet. Hopefully you will see the 'IntrinsicCoinWallet.exe' file your build folder.
+    Now go ahead and try out your wallet.
+
+So in short, this is a crude/tricky way to get your code working on Windows. But credit is due to @jasin. Thanks for his efforts, this wallet was possible.
+
+But its way too easy to get your coin a GUI wallet for Ubuntu. Fork the ChavezCoinWallet code, put your coin's code in the 'cryptonote' folder and execute cmake/make. Voila, your wallet is ready. Its pretty straightforward. Hope this helps in your first trial and error.
