@@ -33,8 +33,8 @@ find_package(Qt5 REQUIRED COMPONENTS
 #    -DBoost_USE_STATIC_RUNTIME:BOOL=OFF)
 #include(ExternalProject)
 #ExternalProject_Add(IntrinsicCoin
-#    SOURCE_DIR ${CMAKE_SOURCE_DIR}/IntrinsicCoin
-#    PREFIX ${CMAKE_CURRENT_BINARY_DIR}/IntrinsicCoin
+#    SOURCE_DIR ${CMAKE_SOURCE_DIR}/cpa-coin/cpacoin/
+#    PREFIX ${CMAKE_CURRENT_BINARY_DIR}/cpa-coin/cpacoin/
 #    CMAKE_ARGS 
 #        -DSTATIC:BOOL=OFF
 #        -DBoost_USE_STATIC_LIBS:BOOL=ON
@@ -197,8 +197,8 @@ if(WIN32)
     if(MSVC)
         add_definitions(/D_CRT_SECURE_NO_WARNINGS /D_WIN32_WINNT=0x0600)
         include_directories(
-            IntrinsicCoin/src/Platform/msc
-            IntrinsicCoin/src/Platform/Windows
+            cpa-coin/cpacoin/src/Platform/msc
+            cpa-coin/cpacoin/src/Platform/Windows
             src/Platform/Windows)
         set(BUILD_PLATFORM WIN32)
         set(Qt5_MAIN Qt5::WinMain)
@@ -213,7 +213,7 @@ qt5_wrap_ui(UIS ${FORMS})
 qt5_add_resources(RCC ${QRC})
 
   add_definitions(/D_CRT_SECURE_NO_WARNINGS /D_WIN32_WINNT=0x0600 /DSTATICLIB)
-  include_directories(IntrinsicCoin/src/Platform/msc)
+  include_directories(cpa-coin/cpacoin/src/Platform/msc)
 
   set(PLATFORM_DIR Windows)
   set(BUILD_PLATFORM WIN32)
@@ -233,9 +233,9 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC -DGIT_REVISION="${GIT_REVISION
 target_include_directories(${PROJECT_NAME} PUBLIC
     include
     src
-    IntrinsicCoin/include
-    IntrinsicCoin/src
-    IntrinsicCoin/external/rocksdb/include
+    cpa-coin/cpacoin//include
+    cpa-coin/cpacoin/src
+    cpa-coin/cpacoin/external/rocksdb/include
     ${Boost_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME}
     ${Qt5_MAIN}
